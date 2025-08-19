@@ -89,7 +89,7 @@ const About = () => {
               </h2>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              For over 20 years, we&apos;ve been slow-smoking our meats to perfection using traditional hickory wood and time-honored recipes passed down through generations.
+              For over 20 years, we have been slow-smoking our meats to perfection using traditional hickory wood and time-honored recipes passed down through generations.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Every bite tells the story of dedication, quality ingredients, and the art of authentic barbecue. From our signature dry rubs to our house-made sauces, we craft everything with love and attention to detail.
@@ -187,7 +187,7 @@ const Menu = () => {
     },
     {
       title: "Pizza",
-      subtitle: "16&quot; Pie",
+      subtitle: "16 inch Pie",
       items: [
         { name: "Cheese Pizza", price: "$16.99" },
         { name: "Pepperoni Pizza", price: "$21.99" },
@@ -227,15 +227,12 @@ const Menu = () => {
     {
       title: "Drinks",
       items: [
-        // Hot Drinks
         { name: "Chai", price: "$2.50" },
-        // Mocktails
         { name: "Mint Lemonade", price: "$4.99" },
         { name: "Mint To Be Spicy", price: "$4.99" },
         { name: "Mango Tango", price: "$4.99" },
         { name: "Strawberry Lemonade", price: "$4.99" },
         { name: "Dragon Blast", price: "$4.99" },
-        // Fountain Drinks
         { name: "Cola", price: "$1.99" },
         { name: "Diet Cola", price: "$1.99" },
         { name: "Lemon-Lime Soda", price: "$1.99" },
@@ -246,16 +243,13 @@ const Menu = () => {
         { name: "Pineapple Juice", price: "$1.99" },
         { name: "Lemonade", price: "$1.99" },
         { name: "Milk", price: "$1.99" },
-        // Iced Tea Refreshers
         { name: "Mango Passionfruit", price: "$2.99" },
         { name: "Desert Pear", price: "$2.99" },
         { name: "Coconut Pineapple", price: "$2.99" },
         { name: "Spicy Mango", price: "$2.99" },
-        // Milkshakes
         { name: "Vanilla Milkshake", price: "$6.99" },
         { name: "Strawberry Milkshake", price: "$6.99" },
         { name: "Chocolate Milkshake", price: "$6.99" },
-        // Others
         { name: "Water", price: "$1.39" },
         { name: "Wizards Potion", price: "$3.99" }
       ]
@@ -418,7 +412,7 @@ const Contact = () => {
               </div>
               
               <p className="italic text-amber-700 mt-6 text-center border-t pt-4">
-                &quot;Fresh food made daily - come hungry!&quot;
+                Fresh food made daily - come hungry!
               </p>
             </div>
           </div>
@@ -454,10 +448,10 @@ const Footer = () => {
 const smoothScrollTo = (targetId: string) => {
   const target = document.querySelector(targetId) as HTMLElement;
   if (target) {
-    const targetPosition = target.offsetTop - 80; // Account for fixed navbar
+    const targetPosition = target.offsetTop - 80;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
-    const duration = 1000; // 1 second
+    const duration = 1000;
     let start: number | null = null;
 
     const animation = (currentTime: number) => {
@@ -468,7 +462,6 @@ const smoothScrollTo = (targetId: string) => {
       if (timeElapsed < duration) requestAnimationFrame(animation);
     };
 
-    // Easing function for smooth animation
     const easeInOutQuart = (t: number, b: number, c: number, d: number) => {
       t /= d / 2;
       if (t < 1) return c / 2 * t * t * t * t + b;
@@ -483,7 +476,6 @@ const smoothScrollTo = (targetId: string) => {
 // Main Page Component
 export default function HomePage() {
   useEffect(() => {
-    // Enhanced smooth scrolling for anchor links
     const handleClick = (e: Event) => {
       const target = e.target as HTMLAnchorElement;
       if (target.hash) {
