@@ -89,7 +89,7 @@ const About = () => {
               </h2>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              For over 20 years, we've been slow-smoking our meats to perfection using traditional hickory wood and time-honored recipes passed down through generations.
+              For over 20 years, we&apos;ve been slow-smoking our meats to perfection using traditional hickory wood and time-honored recipes passed down through generations.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Every bite tells the story of dedication, quality ingredients, and the art of authentic barbecue. From our signature dry rubs to our house-made sauces, we craft everything with love and attention to detail.
@@ -187,7 +187,7 @@ const Menu = () => {
     },
     {
       title: "Pizza",
-      subtitle: "16\" Pie",
+      subtitle: "16&quot; Pie",
       items: [
         { name: "Cheese Pizza", price: "$16.99" },
         { name: "Pepperoni Pizza", price: "$21.99" },
@@ -418,7 +418,7 @@ const Contact = () => {
               </div>
               
               <p className="italic text-amber-700 mt-6 text-center border-t pt-4">
-                "Fresh food made daily - come hungry!"
+                &quot;Fresh food made daily - come hungry!&quot;
               </p>
             </div>
           </div>
@@ -452,7 +452,7 @@ const Footer = () => {
 
 // Custom smooth scroll function
 const smoothScrollTo = (targetId: string) => {
-  const target = document.querySelector(targetId);
+  const target = document.querySelector(targetId) as HTMLElement;
   if (target) {
     const targetPosition = target.offsetTop - 80; // Account for fixed navbar
     const startPosition = window.pageYOffset;
