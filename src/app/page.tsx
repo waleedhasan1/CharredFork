@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-// Navigation Component
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -36,21 +35,17 @@ const Navigation = () => {
   );
 };
 
-// Hero Section Component
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen relative flex items-center justify-center text-center">
-      {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-amber-800/90 via-orange-700/80 to-red-800/90"></div>
       
-      {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-repeat" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
       </div>
 
-      {/* Floating smoke effect */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-32 h-32 bg-orange-400/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-40 right-20 w-48 h-48 bg-red-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -75,7 +70,6 @@ const Hero = () => {
   );
 };
 
-// About Section Component
 const About = () => {
   return (
     <section id="about" className="py-24 bg-gradient-to-br from-stone-100 to-amber-50">
@@ -113,7 +107,6 @@ const About = () => {
   );
 };
 
-// Menu Item Interface
 interface MenuItem {
   name: string;
   price: string;
@@ -126,7 +119,6 @@ interface MenuSection {
   items: MenuItem[];
 }
 
-// Menu Section Component
 const Menu = () => {
   const menuSections: MenuSection[] = [
     {
@@ -149,7 +141,7 @@ const Menu = () => {
         { name: "Two Slices of Pizza", price: "$9.99" },
         { name: "Chicken Rice Bowl", price: "$9.99" },
         { name: "Brisket Rice Bowl", price: "$14.99" },
-        { name: "Salad", price: "$7.49", description: "Spring Mix Salad comes with onions, cucumbers, bell peppers tossed with Hot Honey Ranch. Any Protein added will be drizzled with BBQ Sauce, unless otherwise stated by our guest." },
+        { name: "Salad", price: "$7.49", description: "Spring Mix Salad with onions, cucumbers, bell peppers and Hot Honey Ranch. Any protein gets BBQ sauce unless requested otherwise." },
         { name: "Vegi Sandwich", price: "$10.99" }
       ]
     },
@@ -162,13 +154,13 @@ const Menu = () => {
     {
       title: "Chicken",
       items: [
-        { name: "Rotisserie Chicken", price: "$13.99", description: "Comes with rice, salad, fries, and three sauce of your choice." },
-        { name: "BBQ glazed Leg & Thigh", price: "$12.99", description: "BBQ Glazed leg and Thigh served with choice of a side and sauce." }
+        { name: "Rotisserie Chicken", price: "$13.99", description: "Comes with rice, salad, fries, and three sauces of your choice." },
+        { name: "BBQ glazed Leg & Thigh", price: "$12.99", description: "BBQ Glazed leg and thigh served with choice of side and sauce." }
       ]
     },
     {
       title: "Bowls",
-      subtitle: "Rice bowl comes with flavored rice, spring mix, cucumber, onions, and bell peppers topped with charred and BBQ sauce, served with the choice of your protein.",
+      subtitle: "Rice bowl with flavored rice, spring mix, cucumber, onions, bell peppers, charred sauce and BBQ sauce with your choice of protein.",
       items: [
         { name: "Brisket Rice Bowl", price: "$14.99" },
         { name: "Chicken Rice Bowl", price: "$9.99" },
@@ -178,8 +170,8 @@ const Menu = () => {
     {
       title: "Charred Sandwiches",
       items: [
-        { name: "Brisket Sandwich", price: "$15.99", description: "Comes with Sharp Provolone, Grilled Onions, and Charred Sauce served on a Sesame Bun" },
-        { name: "Chicken Sandwich", price: "$10.99", description: "Comes with Sharp Provolone, Grilled Onions, and Charred Sauce served on a Sesame Bun - Comes with Fries and Drink" },
+        { name: "Brisket Sandwich", price: "$15.99", description: "Sharp Provolone, Grilled Onions, and Charred Sauce on a Sesame Bun" },
+        { name: "Chicken Sandwich", price: "$10.99", description: "Sharp Provolone, Grilled Onions, and Charred Sauce on a Sesame Bun - Includes Fries and Drink" },
         { name: "Grilled Vegi Sandwich Combo", price: "$12.99" },
         { name: "Rotisserie Chicken Sandwich Combo", price: "$14.99" },
         { name: "Brisket Sandwich Combo", price: "$19.99" }
@@ -194,22 +186,22 @@ const Menu = () => {
         { name: "Veggie Pizza", price: "$21.99", description: "Bell peppers, black olives, mushrooms, and onions" },
         { name: "Chicken Pizza", price: "$21.99" },
         { name: "Brisket Pizza", price: "$26.99" },
-        { name: "1/2 Cheese 1/2 Pep Pizza", price: "$20.99" },
-        { name: "1/2 Cheese 1/2 Chik Pizza", price: "$20.99" },
-        { name: "1/2 Cheese 1/2 Brisket Pizza", price: "$24.99" },
-        { name: "1/2 Chik 1/2 Pep Pizza", price: "$22.99" },
-        { name: "1/2 Pep 1/2 Brisket Pizza", price: "$25.99" },
-        { name: "1/2 Chik 1/2 Brisket Pizza", price: "$26.99" },
-        { name: "1/2 Cheese 1/2 Vegi Pizza", price: "$20.99" },
-        { name: "1/2 Vegi 1/2 Brisket Pizza", price: "$25.99" },
-        { name: "1/2 Vegi 1/2 Chik Pizza", price: "$22.99" },
-        { name: "1/2 Vegi 1/2 Pep Pizza", price: "$22.99" }
+        { name: "Half Cheese Half Pepperoni", price: "$20.99" },
+        { name: "Half Cheese Half Chicken", price: "$20.99" },
+        { name: "Half Cheese Half Brisket", price: "$24.99" },
+        { name: "Half Chicken Half Pepperoni", price: "$22.99" },
+        { name: "Half Pepperoni Half Brisket", price: "$25.99" },
+        { name: "Half Chicken Half Brisket", price: "$26.99" },
+        { name: "Half Cheese Half Veggie", price: "$20.99" },
+        { name: "Half Veggie Half Brisket", price: "$25.99" },
+        { name: "Half Veggie Half Chicken", price: "$22.99" },
+        { name: "Half Veggie Half Pepperoni", price: "$22.99" }
       ]
     },
     {
       title: "Kids Menu",
       items: [
-        { name: "3 Pcs Tenders", price: "$9.99" },
+        { name: "3 Piece Tenders", price: "$9.99" },
         { name: "2 Slices Pizza", price: "$9.99" }
       ]
     },
@@ -220,7 +212,7 @@ const Menu = () => {
         { name: "Tenders", price: "$8.99" },
         { name: "Rice", price: "$4.99" },
         { name: "Side Salad", price: "$3.99" },
-        { name: "Side Sauce", price: "" },
+        { name: "Side Sauce", price: "Ask server" },
         { name: "Jumbo Party Wings", price: "$11.99" }
       ]
     },
@@ -236,21 +228,21 @@ const Menu = () => {
         { name: "Cola", price: "$1.99" },
         { name: "Diet Cola", price: "$1.99" },
         { name: "Lemon-Lime Soda", price: "$1.99" },
-        { name: "Ginger-Ale", price: "$1.99" },
+        { name: "Ginger Ale", price: "$1.99" },
         { name: "Orange Soda", price: "$1.99" },
         { name: "Root Beer", price: "$1.99" },
         { name: "Berry Lemonade", price: "$1.99" },
         { name: "Pineapple Juice", price: "$1.99" },
         { name: "Lemonade", price: "$1.99" },
         { name: "Milk", price: "$1.99" },
-        { name: "Mango Passionfruit", price: "$2.99" },
-        { name: "Desert Pear", price: "$2.99" },
-        { name: "Coconut Pineapple", price: "$2.99" },
-        { name: "Spicy Mango", price: "$2.99" },
+        { name: "Mango Passionfruit Tea", price: "$2.99" },
+        { name: "Desert Pear Tea", price: "$2.99" },
+        { name: "Coconut Pineapple Tea", price: "$2.99" },
+        { name: "Spicy Mango Tea", price: "$2.99" },
         { name: "Vanilla Milkshake", price: "$6.99" },
         { name: "Strawberry Milkshake", price: "$6.99" },
         { name: "Chocolate Milkshake", price: "$6.99" },
-        { name: "Water", price: "$1.39" },
+        { name: "Bottled Water", price: "$1.39" },
         { name: "Wizards Potion", price: "$3.99" }
       ]
     },
@@ -262,9 +254,9 @@ const Menu = () => {
         { name: "Eclair", price: "$5.99" },
         { name: "Lemon Cello", price: "$5.99" },
         { name: "Lemon Raspberry Drops", price: "$5.99" },
-        { name: "Red Velvet", price: "$5.99" },
+        { name: "Red Velvet Cake", price: "$5.99" },
         { name: "Tuxedo Dome", price: "$5.99" },
-        { name: "Ice Cream", price: "" }
+        { name: "Ice Cream", price: "Ask server" }
       ]
     }
   ];
@@ -297,10 +289,8 @@ const Menu = () => {
                         {item.name}
                       </h4>
                       <div className="text-right">
-                        <span className={`font-bold text-lg ${
-                          item.price ? 'text-orange-400' : 'text-gray-400'
-                        }`}>
-                          {item.price || 'Ask server'}
+                        <span className="font-bold text-lg text-orange-400">
+                          {item.price}
                         </span>
                       </div>
                     </div>
@@ -329,7 +319,6 @@ const Menu = () => {
   );
 };
 
-// Contact Section Component
 const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-yellow-400 to-amber-300">
@@ -340,7 +329,7 @@ const Contact = () => {
             
             <div className="bg-amber-900/90 text-white rounded-2xl p-8 space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-yellow-400 mb-2 flex items-center">
+                <h3 className="text-xl font-bold text-yellow-400 mb-2">
                   📍 Address
                 </h3>
                 <p className="text-lg">
@@ -350,7 +339,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-yellow-400 mb-2 flex items-center">
+                <h3 className="text-xl font-bold text-yellow-400 mb-2">
                   📞 Phone
                 </h3>
                 <p className="text-lg">
@@ -359,7 +348,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-yellow-400 mb-2 flex items-center">
+                <h3 className="text-xl font-bold text-yellow-400 mb-2">
                   🌐 Online Ordering
                 </h3>
                 <p className="text-lg">
@@ -371,7 +360,7 @@ const Contact = () => {
           </div>
           
           <div className="bg-white/90 rounded-2xl p-8 shadow-2xl">
-            <h3 className="text-2xl font-bold text-amber-800 mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-amber-800 mb-6">
               🕒 Hours
             </h3>
             
@@ -422,7 +411,6 @@ const Contact = () => {
   );
 };
 
-// Footer Component
 const Footer = () => {
   return (
     <footer className="bg-amber-900 text-white py-8">
@@ -438,13 +426,12 @@ const Footer = () => {
             Yelp
           </Link>
         </div>
-        <p>&copy; 2025 Charred Fork. All rights reserved. | Made with ❤️ and lots of smoke</p>
+        <p>&copy; 2025 Charred Fork. All rights reserved.</p>
       </div>
     </footer>
   );
 };
 
-// Custom smooth scroll function
 const smoothScrollTo = (targetId: string) => {
   const target = document.querySelector(targetId) as HTMLElement;
   if (target) {
@@ -473,7 +460,6 @@ const smoothScrollTo = (targetId: string) => {
   }
 };
 
-// Main Page Component
 export default function HomePage() {
   useEffect(() => {
     const handleClick = (e: Event) => {
